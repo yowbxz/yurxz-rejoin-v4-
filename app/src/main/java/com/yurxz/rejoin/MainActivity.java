@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
             AppConfig.setAdbPort(this, port);
             RejoinService.addLog("🔌 Menghubungkan ke " + ip + ":" + port);
             // Test shell
-            Process p = Runtime.getRuntime().exec(new String[]{"sh", "-c", "echo connected"});
+            java.lang.Process p = Runtime.getRuntime().exec(new String[]{"sh", "-c", "echo connected"});
             p.waitFor(3, java.util.concurrent.TimeUnit.SECONDS);
             RejoinService.adbConnected = true;
             RejoinService.addLog("✅ Shell aktif - ADB target: " + ip + ":" + port);

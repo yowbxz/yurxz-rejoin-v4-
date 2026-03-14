@@ -170,7 +170,7 @@ public class RejoinService extends Service {
     private String runShell(String cmd) {
         try {
             // Coba via Runtime (works for apps with shell access)
-            Process p = Runtime.getRuntime().exec(new String[]{"sh", "-c", cmd});
+            java.lang.Process p = Runtime.getRuntime().exec(new String[]{"sh", "-c", cmd});
             BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
             StringBuilder sb = new StringBuilder();
             String line;
