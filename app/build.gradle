@@ -4,6 +4,7 @@ plugins {
 
 android {
     compileSdk 34
+    namespace "com.yurxz.rejoin"
 
     defaultConfig {
         applicationId "com.yurxz.rejoin"
